@@ -6,18 +6,20 @@ public abstract class  MenuItem {
     private String productCode;
     private String productDescription;
     private double productPrice;
-    private int quantity;
+    private int quantity= 25;
 
     //explicit constructor
-    public MenuItem(String productCode, String productDescription, double productPrice){
+    public MenuItem(String productCode, String productDescription,int quantity, double productPrice){
         this.productCode = productCode;
         this.productDescription = productDescription;
         this.productPrice = productPrice;
-
+        this.quantity = quantity;
     }
     //getter/ setter
 
-    public abstract String getProductCode();
+    public String getProductCode() {
+        return productCode;
+    }
 
     public String getProductDescription() {
         return productDescription;

@@ -38,8 +38,5 @@ public class ProductInventory {
         return menuItemList;
     }
 
-    public MenuItem searchMenuItemByProductCode(String productCode) {
-        MenuItem item = inventory.get(productCode);
-        return item;
-    }
+
 }

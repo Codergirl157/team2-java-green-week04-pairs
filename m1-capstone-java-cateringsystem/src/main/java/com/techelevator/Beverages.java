@@ -2,12 +2,9 @@ package com.techelevator;
 
 public class Beverages extends MenuItem{
 
-    public Beverages(String productCode, String productDescription, double productPrice) {
-        super(productCode, productDescription, productPrice);
+    public Beverages(String productCode, String productDescription, int quantity, double productPrice) {
+        super(productCode, productDescription,quantity, productPrice);
     }
 
-    @Override
-    public String getProductCode() {
-        return null;
-    }
+
 }

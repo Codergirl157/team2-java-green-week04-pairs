@@ -41,7 +41,7 @@ public class ProductInventoryFileReader {
             MenuItem item = null;
             if (itemType.equals("A")) {
                 //create a new appetizer menuItem
-                item = new Appetizers(productCode, productDescription, productPrice);
+                item = new Appetizers();
             }
             else if (itemType.equals("B")) {
                 //create a new beverage menuItem
