@@ -9,7 +9,8 @@ public abstract class  MenuItem {
     private int quantity;
 
     //explicit constructor
-    public MenuItem( String productDescription, double productPrice){
+    public MenuItem(String productCode, String productDescription, double productPrice){
+        this.productCode = productCode;
         this.productDescription = productDescription;
         this.productPrice = productPrice;
 
@@ -26,5 +27,6 @@ public abstract class  MenuItem {
         return productPrice;
     }
     //this will need to be accessed by other class
+    //can't use MenuItem because abstract, use file reader A, B, D, E
 
 }

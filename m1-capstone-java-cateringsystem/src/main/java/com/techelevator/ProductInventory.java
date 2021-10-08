@@ -8,13 +8,13 @@ import java.util.*;
 
 public class ProductInventory {
 
-    private Map<String, MenuItem> ProductInventory;
+    private Map<String, MenuItem> inventory;
 
     //this constructor only gets called when someone creates it
     //we are init
     public ProductInventory(String inventoryFile) {
         ProductInventoryFileReader reader = new ProductInventoryFileReader(inventoryFile);
-        ProductInventory = reader.loadMenuItem();
+        inventory = reader.loadMenuItem();
 
     }
 
@@ -25,16 +25,21 @@ public class ProductInventory {
         List<MenuItem> menuItemList = new ArrayList<>();
 
         //get a list of keys
-        Set<String> keys = ProductInventory.keySet();
+        Set<String> keys = inventory.keySet();
 
         //iterate through the set and get values out of Map, and put into our list
         for (String key : keys) {
-            MenuItem menuItem = ProductInventory.get(key);
+            MenuItem menuItem = inventory.get(key);
             menuItemList.add(menuItem);
-            // OPTION 2 on one line... listOfHomes.add(inventory.get(key));
+
         }
 
         //return our arraylist
         return menuItemList;
+    }
+
+    public MenuItem searchMenuItemByProductCode(String productCode) {
+        MenuItem item = inventory.get(productCode);
+        return item;
     }
 }
