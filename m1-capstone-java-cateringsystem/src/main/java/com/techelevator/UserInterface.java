@@ -23,7 +23,8 @@ public class UserInterface {
     public void printError (String msg) {
         System.out.println(msg);
     }
-
+//print header productcode, productDescription, quantity and Price, outside for loop, only need it twice
+    //items print on one line each
     public void printMenu(List<MenuItem> items) {
         for (MenuItem item : items){
             System.out.println(String.format("%-25s %s", "Product Code: ", item.getProductCode()));
