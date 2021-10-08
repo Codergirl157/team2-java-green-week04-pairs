@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.TreeMap;
 
 
 public class ProductInventoryFileReader {
@@ -41,18 +40,19 @@ public class ProductInventoryFileReader {
             MenuItem item = null;
             if (itemType.equals("A")) {
                 //create a new appetizer menuItem
-                item = new Appetizers();
+                item = new Appetizers(productCode,productDescription,productPrice);
             }
             else if (itemType.equals("B")) {
                 //create a new beverage menuItem
-                item = new Beverages(productCode, productDescription, productPrice);
+                item = new Beverages(productCode,productDescription,productPrice);
             }
             else if (itemType.equals("D")) {
                 //create a new dessert menuItem
                 item = new Desserts(productCode, productDescription, productPrice);
             }
             else {
-                item = new Entrees(productCode, productDescription, productPrice); }
+                item = new Entrees(productCode,productDescription,productPrice);
+            }
 
             items.put(productCode, item);
 
@@ -64,7 +64,7 @@ public class ProductInventoryFileReader {
     }
 
 
-    }
+}
 
 //create a new appetizer menuItem
 

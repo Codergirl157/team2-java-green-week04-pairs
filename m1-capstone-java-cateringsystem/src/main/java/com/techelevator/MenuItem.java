@@ -6,14 +6,14 @@ public abstract class  MenuItem {
     private String productCode;
     private String productDescription;
     private double productPrice;
-    private int quantity= 25;
+    private int quantity = 25;
 
     //explicit constructor
-    public MenuItem(String productCode, String productDescription,int quantity, double productPrice){
+    public MenuItem(String productCode, String productDescription, double productPrice){
         this.productCode = productCode;
         this.productDescription = productDescription;
         this.productPrice = productPrice;
-        this.quantity = quantity;
+
     }
     //getter/ setter
 
@@ -28,7 +28,11 @@ public abstract class  MenuItem {
     public double getProductPrice() {
         return productPrice;
     }
-    //this will need to be accessed by other class
+
+
+//this will need to be accessed by other class
     //can't use MenuItem because abstract, use file reader A, B, D, E
+
+//   productCode,productDescription,quantity,productPrice
 
 }
