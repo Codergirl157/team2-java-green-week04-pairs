@@ -1,38 +1,40 @@
 package com.techelevator;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.io.FileReader;
+import java.util.*;
+
+
+
 
 public class ProductInventory {
 
-    String cateringSystem = "C:\\Users\\Student\\source\\repos\\pairs\\team2-java-green-week04-pairs\\m1-capstone-java-cateringsystem\\cateringsystem.csv";
+    private Map<String, MenuItem> ProductInventory;
 
-    File cateringMenu = new File(cateringSystem);
-
-    Scanner ourScanner;
-    {
-        try {
-            ourScanner = new Scanner(cateringMenu);
-
-
-            while(ourScanner.hasNextLine()){
-                String output = ourScanner.nextLine();
-                System.out.println(output);
-                //what holds our information from each line
-                //class that creates objects(menu item)
-            }
-        } catch (FileNotFoundException fileNotFoundException) {
-            fileNotFoundException.printStackTrace();
-        }
+    //this constructor only gets called when someone creates it
+    //we are init
+    public ProductInventory(String inventoryFile) {
+        ProductInventoryFileReader reader = new ProductInventoryFileReader(inventoryFile);
+        ProductInventory = reader.loadMenuItem();
 
     }
 
-    //how do we put this information into a loop
-    //example in jghomes (to pull info out a string, using setters, put in instance of menu type we create
+    //Return ALL items in the map as a list
+    public List<MenuItem> retrieveListOfItems() {
+
+        //create an arraylist to hold our list of homes
+        List<MenuItem> menuItemList = new ArrayList<>();
+
+        //get a list of keys
+        Set<String> keys = ProductInventory.keySet();
+
+        //iterate through the set and get values out of Map, and put into our list
+        for (String key : keys) {
+            MenuItem menuItem = ProductInventory.get(key);
+            menuItemList.add(menuItem);
+            // OPTION 2 on one line... listOfHomes.add(inventory.get(key));
+        }
+
+        //return our arraylist
+        return menuItemList;
+    }
 }
-
-
-//  String menu = String.format("%-20s" +  productCode.toString()  +"%20s" + productName + "%20s" + "Qty" + "$" + productPrice);
-//                System.out.println(menu);
-
