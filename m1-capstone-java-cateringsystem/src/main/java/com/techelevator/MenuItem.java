@@ -9,11 +9,11 @@ public abstract class  MenuItem {
     private int quantity= 25;
 
     //explicit constructor
-    public MenuItem(String productCode, String productDescription,int quantity, double productPrice){
+    public MenuItem(String productCode, String productDescription, double productPrice){
         this.productCode = productCode;
         this.productDescription = productDescription;
         this.productPrice = productPrice;
-        this.quantity = quantity;
+
     }
     //getter/ setter
 

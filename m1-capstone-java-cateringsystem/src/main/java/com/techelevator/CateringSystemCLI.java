@@ -20,9 +20,10 @@ public class CateringSystemCLI {
 		//create an instance of the inventory so we can use it to get data
 		ProductInventory inventory = new ProductInventory("C:\\Users\\Student\\source\\repos\\pairs\\team2-java-green-week04-pairs\\m1-capstone-java-cateringsystem\\cateringsystem.csv");
 		UserInterface userInterface = new UserInterface();
+				//while loop, if statements
 
-		//while loop, if statements
-		while(1 > 0){
+		boolean isRunning = true;
+		while(isRunning){
 			String choice = userInterface.printMenu();
 
 			if(choice.equals("1")){
@@ -34,11 +35,16 @@ public class CateringSystemCLI {
 			}
 			else if (choice.equals("2")){
 				//display submenu
+				userInterface.printsubMenu();
+
+
 
 			}
 			else if (choice.equals("3")){
 				//Quit
-
+				isRunning = false;
+				System.out.println("Thank you, and have a great day!");
+				System.exit(0);
 			}
 			else {
 				//error Invalid Option
@@ -50,6 +56,8 @@ public class CateringSystemCLI {
 
 
 	}
+
+
 	
 	
 

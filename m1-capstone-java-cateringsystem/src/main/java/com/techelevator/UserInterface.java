@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class UserInterface {
 
+
     private Scanner scanner = new Scanner(System.in);
 
     public String printMenu(){
@@ -19,6 +20,18 @@ public class UserInterface {
         System.out.println("Please select a number from above");
         return scanner.nextLine();
 
+    }
+    private final Scanner myScanner = new Scanner(System.in);
+    public String printsubMenu() {
+
+        System.out.println("(1) Add money");
+        System.out.println("(2) Select product");
+        System.out.println("(3) Complete Transaction");
+        System.out.println("\n");
+        System.out.println("Please select a number from above");
+
+
+        return scanner.nextLine();
     }
     public void printError (String msg) {
         System.out.println(msg);
@@ -34,5 +47,7 @@ public class UserInterface {
 
 
     }
+
+
 
 }

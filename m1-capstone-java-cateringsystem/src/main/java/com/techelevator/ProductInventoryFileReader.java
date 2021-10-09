@@ -23,7 +23,7 @@ public class ProductInventoryFileReader {
     public Map<String, MenuItem> loadMenuItem() {
 
         //Create a map
-        Map<String, MenuItem> items = new HashMap<>();
+        Map<String, MenuItem> items = new TreeMap<>();
 
         //loop through reading in records from file, convert those into home objects and then  place in the map
 
@@ -41,7 +41,7 @@ public class ProductInventoryFileReader {
             MenuItem item = null;
             if (itemType.equals("A")) {
                 //create a new appetizer menuItem
-                item = new Appetizers();
+                item = new Appetizers(productCode, productDescription, productPrice);
             }
             else if (itemType.equals("B")) {
                 //create a new beverage menuItem
