@@ -6,7 +6,7 @@ public abstract class  MenuItem {
     private String productCode;
     private String productDescription;
     private double productPrice;
-    private int quantity= 25;
+    private int quantity = 25;
 
     //explicit constructor
     public MenuItem(String productCode, String productDescription, double productPrice){
@@ -28,7 +28,11 @@ public abstract class  MenuItem {
     public double getProductPrice() {
         return productPrice;
     }
-    //this will need to be accessed by other class
+
+
+//this will need to be accessed by other class
     //can't use MenuItem because abstract, use file reader A, B, D, E
+
+//   productCode,productDescription,quantity,productPrice
 
 }

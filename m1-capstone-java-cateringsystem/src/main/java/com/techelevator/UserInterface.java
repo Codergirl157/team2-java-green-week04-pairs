@@ -1,6 +1,7 @@
 package com.techelevator;
 
 import java.awt.*;
+import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Scanner;
 
@@ -39,9 +40,9 @@ public class UserInterface {
 //print header productcode, productDescription, quantity and Price, outside for loop, only need it twice
     //items print on one line each
     public void printMenu(List<MenuItem> items) {
-        System.out.println("Product Code           " + "Description          " + "Qty              " + "Price      ");
+        System.out.println(String.format("%-20s","Product Code") + String.format("%-23s", "Description") + String.format("%-12s","Qty") + String.format("%-10s", "Price"));
         for (MenuItem item : items){
-            System.out.println(String.format("%-20s", item.getProductCode()) + String.format("%-20s", item.getProductDescription()) + String.format("%-10s", "25") + String.format("%.2f", item.getProductPrice()));
+            System.out.println(String.format("%-20s", item.getProductCode()) + String.format("%-23s", item.getProductDescription()) + String.format("%-10s", "25") + String.format("%.2f", item.getProductPrice()));
 
         }
 
