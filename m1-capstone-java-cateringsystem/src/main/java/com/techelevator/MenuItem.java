@@ -8,6 +8,10 @@ public abstract class  MenuItem {
     private double productPrice;
     private int quantity = 25;
 
+    public int getQuantity() {
+        return quantity;
+    }
+
     //explicit constructor
     public MenuItem(String productCode, String productDescription, double productPrice){
         this.productCode = productCode;

@@ -68,7 +68,15 @@ public class CateringSystemCLI {
             String subMenuChoice = userInterface.printsubMenu();
 
             if (subMenuChoice.equalsIgnoreCase("1")) {
-                System.out.println("You chose add money, please enter the amount you will like to add.");
+                System.out.println(" Please enter the amount of money you want to add.");
                 double credit = Double.parseDouble(scanner.nextLine());
+                balanceAccount.addMoney(credit);
+
+            }
+                else if (subMenuChoice.equalsIgnoreCase("2")) {
+
+                    List<MenuItem> results = inventory.retrieveListOfItems();
+                    userInterface.printMenu();
+
             }
         }    }    }
