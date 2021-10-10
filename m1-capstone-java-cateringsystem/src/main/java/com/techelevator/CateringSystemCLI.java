@@ -62,6 +62,10 @@ public class CateringSystemCLI {
         boolean running = true;
 
         while (running) {
+            inventory = new ProductInventory("C:\\Users\\Student\\source\\repos\\pairs\\team2-java-green-week04-pairs\\m1-capstone-java-cateringsystem\\cateringsystem.csv");
+            userInterface = new UserInterface();
+            balanceAccount = new BalanceAccount();
+
 
             Scanner scanner = new Scanner(System.in);
 
@@ -75,8 +79,12 @@ public class CateringSystemCLI {
             }
                 else if (subMenuChoice.equalsIgnoreCase("2")) {
 
-                    List<MenuItem> results = inventory.retrieveListOfItems();
+                List<MenuItem> results = inventory.retrieveListOfItems();
+
+
                     userInterface.printMenu();
+
+                System.out.println("Please enter the product code for the item you want to purchase");
 
             }
         }    }    }
