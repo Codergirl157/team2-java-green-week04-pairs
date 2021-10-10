@@ -8,6 +8,7 @@ public class CateringSystemCLI {
     ProductInventory inventory;
     UserInterface userInterface;
     BalanceAccount balanceAccount;
+    //class variables to be used below
 
 
     public static void main(String[] args) {

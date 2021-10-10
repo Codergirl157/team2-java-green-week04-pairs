@@ -21,7 +21,7 @@ public class ProductInventory {
     //Return ALL items in the map as a list
     public List<MenuItem> retrieveListOfItems() {
 
-        //create an arraylist to hold our list of homes
+        //create an arraylist to hold our list of menuItems
         List<MenuItem> menuItemList = new ArrayList<>();
 
         //get a list of keys
