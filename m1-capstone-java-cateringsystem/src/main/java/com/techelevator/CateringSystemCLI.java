@@ -63,19 +63,17 @@ public class CateringSystemCLI {
         boolean running = true;
 
         while (running) {
-            inventory = new ProductInventory("C:\\Users\\Student\\source\\repos\\pairs\\team2-java-green-week04-pairs\\m1-capstone-java-cateringsystem\\cateringsystem.csv");
-            userInterface = new UserInterface();
-            balanceAccount = new BalanceAccount();
-
 
             Scanner scanner = new Scanner(System.in);
 
             String subMenuChoice = userInterface.printsubMenu();
 
             if (subMenuChoice.equalsIgnoreCase("1")) {
-                System.out.println(" Please enter the amount of money you want to add.");
+                System.out.println("Please enter the amount of money you want to add.");
                 double credit = Double.parseDouble(scanner.nextLine());
                 balanceAccount.addMoney(credit);
+
+                System.out.println("Your Account Balance is: $" + balanceAccount.getAccountBalance());
 
             }
                 else if (subMenuChoice.equalsIgnoreCase("2")) {
@@ -83,9 +81,12 @@ public class CateringSystemCLI {
                 List<MenuItem> results = inventory.retrieveListOfItems();
 
 
-                    userInterface.printMenu();
+                    userInterface.printMenu(results);
 
                 System.out.println("Please enter the product code for the item you want to purchase");
+                String choice = scanner.nextLine();
+                System.out.println(choice);
+                
 
             }
         }    }    }
