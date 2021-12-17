@@ -86,7 +86,7 @@ public class CateringSystemCLI {
                 System.out.println("Please enter the product code for the item you want to purchase");
                 String choice = scanner.nextLine();
                 System.out.println(choice);
-                
+
 
             }
         }    }    }
